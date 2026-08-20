@@ -87,16 +87,27 @@
   body { padding: 24px 16px 64px; }
   .wrap { max-width: 1180px; margin: 0 auto; }
 
+  .header-hero {
+    background: linear-gradient(135deg, var(--series-1), color-mix(in srgb, var(--series-1) 78%, black));
+    border-radius: 14px; padding: 20px 22px 18px; margin-bottom: 18px;
+    box-shadow: var(--card-shadow);
+  }
   .topbar {
     display: flex; align-items: flex-start; justify-content: space-between;
-    gap: 16px; margin-bottom: 20px; flex-wrap: wrap;
+    gap: 16px; margin-bottom: 16px; flex-wrap: wrap;
   }
-  .title-block h1 { font-size: 22px; margin: 0 0 4px; font-weight: 700; }
-  .title-block p { margin: 0; color: var(--text-secondary); font-size: 13.5px; line-height: 1.5; }
-  .theme-toggle {
-    border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary);
+  .header-hero .title-block h1 { font-size: 22px; margin: 0 0 4px; font-weight: 700; color: #ffffff; }
+  .header-hero .title-block p { margin: 0; color: rgba(255,255,255,0.85); font-size: 13.5px; line-height: 1.5; }
+  .header-hero .theme-toggle {
+    border: 1px solid rgba(255,255,255,0.35); background: rgba(255,255,255,0.12); color: #ffffff;
     border-radius: 8px; padding: 7px 12px; font-size: 13px; cursor: pointer;
   }
+  .header-hero .criteria-note {
+    background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.25);
+    border-left: 3px solid #ffffff; color: rgba(255,255,255,0.92); margin-bottom: 0;
+  }
+  .header-hero .criteria-note b { color: #ffffff; }
+  .header-hero .criteria-note code { background: rgba(255,255,255,0.18); color: #ffffff; }
 
   .card {
     background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
@@ -211,6 +222,7 @@
 <body>
 <div class="wrap viz-root">
 
+  <div class="header-hero">
   <div class="topbar">
     <div class="title-block">
       <h1>Campaign Dashboard: โตยกก๊วน สุขยกแก๊งค์</h1>
@@ -227,6 +239,7 @@
       &nbsp;แต่ละกลุ่มแสดง <b>อันดับผู้ชนะ (TOP N)</b> โดยเรียงเฉพาะร้านที่ Pass Criteria ตาม Score จากมากไปน้อย
       พร้อม Leaderboard สำรองแสดงร้านที่มี Score สูงสุดทุกสถานะไว้เป็นข้อมูลอ้างอิง
     </div>
+  </div>
   </div>
 
   <div class="card">
